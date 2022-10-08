@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StepsComponent } from './steps/steps.component';
+
 
 @Component({
   selector: 'app-root',
