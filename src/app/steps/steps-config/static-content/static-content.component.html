@@ -1,17 +1,39 @@
 <!-- <p>static-content works!</p> -->
-<form class = "form-group">
-
-    <label> Content :</label>
-    <input placeholder="content" class="form-control">
+<form class="form-group">
+    <fieldset ngModelGroup = "config">
+    <legend>Config : </legend>
     <br>
-    <div>
-        <div class = "d-flex justify-content-between">
-    <div>Headers :</div>
+    <label> Content :</label>
+    <input type = "text" name="content" class="form-control" ngModel>
+    <br>
+    <!-- <div class="form-inline"> -->
+        <div class="form-group">
+    <div formArrayName = "headers" >
+        <fieldset ngModelGroup="Headers">
+        <div class="d-flex justify-content-between">
+        <div >Headers :</div>
+        <div><button class = "btn btn-primary">Add</button></div>
+        </div>
+
+    
+
+        <label>TemplateName : </label>
+        <input type = "text" id = "tempName" name = "tempName" ngModel class="form-control">
+
+        
+        <label>Headers : </label>
+        <input type = "text" id = "headers" name ="headers"  ngModel class="form-control">
+    </fieldset>
+    </div>
+</div>
+<!-- </div> -->
+   
+    <!-- <div>Headers :</div>
     <div><button class = "btn btn-primary">Add</button></div>
     
-</div>
+</div> -->
 
-    <form formArrayName = "headers">
+   <!-- <div formArrayName = "headers">
 
         <label>TemplateName : </label>
         <input type = "text" id = "tempName" class="form-control">
@@ -20,7 +42,10 @@
         <label>Headers : </label>
         <input type = "text" id = "headers" class="form-control">
 
-    </form>
-</div>
+    </div>  -->
+<!-- </div>
+</div> -->
+</fieldset>
 
 </form>
+<!-- <pre>{{ staticForm.value | json }}</pre> -->

@@ -1,12 +1,21 @@
-<div class = "section align-items-center " style="width:70%;margin: auto;margin-top: 50px;">
+<form  #myForm="ngForm" class = "section align-items-center " style="width:70%;margin: auto;margin-top: 50px;">
 
-    <div class="d-flex justify-content-between" >
-        <label>Sections </label>
-        <div><button type="button" class="btn btn-success" id = "addStep">Add</button></div>
-    </div>
+    
+        <fieldset ngModelGroup = "sections">
+            <div class="d-flex justify-content-between" >
+            <label >Sections </label>
+            <div><button type="button" class="btn btn-success" id = "addStep">Add</button></div>
+            </div>
+
+       
+        
     <br>
-    <app-steps>
+
+    <app-steps ngModel>
         
     </app-steps>
+    </fieldset>
+    <button type = "submit" class="btn btn-primary">Submit</button>
 
-</div>
+</form>
+<pre>{{myForm.value | json}}</pre>

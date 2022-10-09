@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { FormGroup, FormControl,FormArray, FormBuilder } from '@angular/forms'
+
 
 @Component({
   selector: 'app-steps',
   templateUrl: './steps.component.html',
   styleUrls: ['./steps.component.css']
 })
-export class StepsComponent implements OnInit {
+export class StepsComponent {
 
-  constructor() { }
+  // stepsForm : FormBuilder;
+  // constructor(private fb:FormBuilder) {
 
-  ngOnInit(): void {
-  }
+  //   this.stepsForm = this.fb.group([{
+  //     steps: this.fb.array([]) ,
+  //   }]);
 
+  
+
+
+  
 }
